@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 import routes from './routes';
 
 const app = express();
@@ -13,6 +14,7 @@ const username2: string = 'Anderson';
 //I can only declare the variable
 const userName3 = "Anderson";
 
+app.use(cors());
 app.use(routes);
 
 app.listen(3333);
